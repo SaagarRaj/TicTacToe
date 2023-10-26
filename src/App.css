@@ -6,6 +6,38 @@ body {
   color: white;
 }
 
+body::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background-color: #ed2ff0;
+  left: 15%;
+  top: 20%;
+  filter: blur(150px);
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background-color: #22a8cd;
+  left: 80%;
+  top: 74%;
+  filter: blur(150px);
+}
+
+.board-card {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.44);
+  padding: 20px, 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.4px);
+  -webkit-backdrop-filter: blur(7.4px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
 h1 {
   text-align: center;
 }
@@ -95,7 +127,7 @@ h1 {
   border: #5468ff 8px;
   border-style: dotted;
   padding: 10px;
-  margin-top: 50px;
+  margin-top: 20px;
   font-size: 1.5em;
 }
 
@@ -109,10 +141,13 @@ h1 {
 }
 
 .reset-button {
-  margin-top: 50px;
+  margin-top: 30px;
   padding: 20px;
-  background-color: #0074a6;
+  background-color: rgba(0, 0, 0, 0.44);
   color: white;
   width: 100%;
+  border: none;
   font-size: 1.5em;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }

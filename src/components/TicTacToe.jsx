@@ -62,7 +62,7 @@ function TicTacToe() {
   const [gameState, setGameState] = useState(GameState.inprogress);
 
   const handleTileClick = (index) => {
-    if (gameState != GameState.inprogress) {
+    if (gameState !== GameState.inprogress) {
       return;
     }
     if (tiles[index] !== null) {
@@ -94,7 +94,7 @@ function TicTacToe() {
     }
   }, [gameState]);
   return (
-    <div>
+    <div className="board-card">
       <h1>TicTacToe</h1>
       <Board
         playerTurn={playerTurn}
