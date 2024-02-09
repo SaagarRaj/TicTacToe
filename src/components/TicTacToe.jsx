@@ -5,6 +5,8 @@ import GameState from "./GameState";
 import Reset from "./Reset";
 import ClickSound from "../Sounds/Click_sound.wav";
 import GameOverSound from "../Sounds/Game_over.wav";
+import confetti from "canvas-confetti";
+require("canvas-confetti");
 
 const ClickSoundAsset = new Audio(ClickSound);
 ClickSoundAsset.volume = 0.2;
@@ -43,6 +45,7 @@ function checkWinner(tiles, setStrikeClass, setGameState) {
 
       if (tileValue1 === PLAYER_X) {
         setGameState(GameState.playerXwins);
+        confetti();
       } else {
         setGameState(GameState.playerOwins);
       }
